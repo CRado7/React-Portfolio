@@ -1,58 +1,50 @@
 export default function Portfilio() {
-  return (
-      <body>
-          <section class="projects">
-              <h1 id="portfolio">Web Development Projects</h1>
-              <div class="web-dev">
-                  <img class="github" src="https://via.placeholder.com/150" alt="GitHub" />
-                  <h2>Project 1</h2>
-                  <img src="https://via.placeholder.com/150" alt="Project 1" />
-              </div>
+    return (
+        <div>
+            <h1 class="title">Web Development Projects</h1>
+            <section class="projects">
+                <div class="thumbnail" id="password">
+                    <a href="https://github.com/CRado7/Random-Password-Generator" target="blank"><img class="github" src="src/assets/icons8-github-24.png" alt="GitHub" /></a>
+                    <a href="https://crado7.github.io/Random-Password-Generator/" target="blank"><h2>Random Password Generator</h2></a>
+                </div>
 
-              <div class="web-dev">
-                  <img class="github" src="https://via.placeholder.com/150" alt="GitHub" />
-                  <h2>Project 2</h2>
-                  <img src="https://via.placeholder.com/150" alt="Project 2" />
-              </div>
+                <div class="thumbnail">
+                <a href="https://github.com/CRado7/Task-List" target="blank"><img class="github" src="src/assets/icons8-github-24.png" alt="GitHub" /></a>
+                <a href="https://floating-reaches-02785-c3d3bbac3309.herokuapp.com" target="blank"><h2>Task List</h2></a>
+                </div>
 
-              <div class="web-dev">
-                  <img class="github" src="https://via.placeholder.com/150" alt="GitHub" />
-                  <h2>Project 3</h2>
-                  <img src="https://via.placeholder.com/150" alt="Project 3" />
-              </div>
+                <div class="thumbnail">
+                    <img class="github" src="src/assets/icons8-github-24.png" alt="GitHub" />
+                    <h2>Project 3</h2>
+                </div>
 
-              <div class="web-dev">
-                  <img class="github" src="https://via.placeholder.com/150" alt="GitHub" />
-                  <h2>Project 4</h2>
-                  <img src="https://via.placeholder.com/150" alt="Project 4" />
-              </div>
+                <div class="thumbnail">
+                    <img class="github" src="src/assets/icons8-github-24.png" alt="GitHub" />
+                    <h2>Project 4</h2>
+                </div>
 
-              <div class="web-dev">
-                  <img class="github" src="https://via.placeholder.com/150" alt="GitHub" />
-                  <h2>Project 5</h2>
-                  <img src="https://via.placeholder.com/150" alt="Project 5" />
-              </div>
+                <div class="thumbnail">
+                    <img class="github" src="src/assets/icons8-github-24.png" alt="GitHub" />
+                    <h2>Project 5</h2>
+                </div>
 
-              <div class="web-dev">
-                  <img class="github" src="https://via.placeholder.com/150" alt="GitHub" />
-                  <h2>Project 6</h2>
-                  <img src="https://via.placeholder.com/150" alt="Project 6" />
-              </div>
-          </section>
+                <div class="thumbnail">
+                    <img class="github" src="src/assets/icons8-github-24.png" alt="GitHub" />
+                    <h2>Project 6</h2>
+                </div>
+            </section>
 
-          <section class="projects">
-              <h1 id="portfolio">Graphic Design Projects</h1>
-              <div class="graphic-design">
-                  <h2>Parlor Ski Designs</h2>
-                  <img src="https://via.placeholder.com/150" alt="Parlor Ski Designs" />
-              </div>
+            {/* <h1 id="portfolio">Graphic Design Projects</h1>
+            <section class="projects">
+                <div class="thumbnail">
+                    <h2 id="parlor">Parlor Ski Designs</h2>
+                </div>
 
-              <div class="graphic-design">
-                  <h2>Rainy Day Fun</h2>
-                  <img src="https://via.placeholder.com/150" alt="Rainy Day Fun" />
-              </div>
-          </section>
-      </body>
-      
-  );
+                <div class="thumbnail">
+                    <h2 id="art">Rainy Day Fun</h2>
+                </div>
+            </section> */}
+        </div>
+        
+    );
 }

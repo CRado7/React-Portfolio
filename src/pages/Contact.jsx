@@ -1,7 +1,7 @@
 export default function Contact() {
   return (
       <section>
-          <h1 id="contact">Drop A Line</h1>
+          <h1 class="title">Contact</h1>
           <form>
               <div id="name">
                   <label htmlFor="name" className="form-label">
@@ -11,7 +11,7 @@ export default function Contact() {
                       type="text" required
                       className="form-control"
                       id="name"
-                      placeholder="Enter your name"
+                      placeholder="Name"
                   />
               </div>
               <div id="email">
@@ -22,17 +22,17 @@ export default function Contact() {
                       type="email" required
                       className="form-control"
                       id="email"
-                      placeholder="Enter your email"
+                      placeholder="johndoe@email.com"
                   />
               </div>
               <div id="message">
-              <label htmlFor="name" className="form-label">
-                      White Something Cool
+              <label htmlFor="message" className="form-label">
+                      Write Something Cool
                   </label>
                   <input
                       type="text" required
                       className="form-control"
-                      id="name"
+                      id="message"
                       placeholder=""
                   />
               </div>
