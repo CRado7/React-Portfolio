@@ -1,26 +1,59 @@
-// Bringing in the required import from 'react-router-dom'
 import { Link } from 'react-router-dom';
 import Navbar from './UI/Navbar';
+import React, { useState, useEffect, useRef } from 'react';
+// import { CSSTransition } from 'react-transition-group';
 
 
 export default function Nav() {
-  // The Navbar UI component will render each of the Link elements in the links prop
+  const [isOpen, setIsOpen] = useState(false);
+  const menuRef = useRef(null);
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
+  const handleClickOutside = (event) => {
+    if (menuRef.current && !menuRef.current.contains(event.target)) {
+      setIsOpen(false);
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, []);
+
   return (
-    <Navbar
-      links={[
-        <Link key={1} className="nav-link text-light" to="/" activeClassName="active">
-          About Me
-        </Link>,
-        <Link key={2} className="nav-link text-light" to="/portfolio">
-          Portfolio
-        </Link>,
-        <Link key={3} className="nav-link text-light" to="/resume">
-          Resume
-        </Link>,
-        <Link key={4} className="nav-link text-light" to="/contact">
-          Contact
-        </Link>,
-      ]}
-    />
+    <div ref={menuRef} className={`dropdown-menu ${isOpen ? 'open' : ''}`}>
+       <a href="/"><img src="/src/assets/home.svg" alt="home"  id="homebtn"/></a>
+      <button className="dropdown-toggle" onClick={toggleMenu}>
+       <img src="/src/assets/menu.svg" alt="menu icon"  id="menu"/>
+      </button>
+        {/* <CSSTransition
+          in={isOpen}
+          timeout={300}
+          classNames="dropdown-animation"
+          unmountOnExit
+          > */}
+          <Navbar
+            links={[
+              <Link key={1} class="navlink"  id="home" activeClassName="active" to="/">
+                Home
+              </Link>,
+              <Link key={2} class="navlink" activeClassName="active" to="/portfolio">
+                Portfolio
+              </Link>,
+              <Link key={3} class="navlink" activeClassName="active" to="/resume">
+                Resume
+              </Link>,
+              <Link key={4} class="navlink" activeClassName="active" to="/contact">
+                Contact
+              </Link>,
+            ]}
+          />
+        {/* </CSSTransition> */}
+    </div>
   );
 }

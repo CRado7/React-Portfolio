@@ -1,5 +1,18 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-image: url(src/assets/background.jpg);
+    position: fixed center center no-repeat;
+    background-size: cover;
+    overflow-y: hidden;
+}
 
 /* General */
+
 h1 {
     text-align: left;
     width: 100%;
@@ -8,28 +21,58 @@ h1 {
 }
 
 /* Navbar */
-
-#nav-name {
-    text-align: center;
-    margin-top: 10px;
+.dropdown-menu {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    border-radius: 25px;
+    border: 0;
+    margin: 25px auto 0;
+    max-width: 500px;
+    padding-top: 0px;
+    /* style */
+    background: rgba(255, 255, 255, 0.35);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 3px solid rgba(255, 255, 255, 1);
 }
+  
+  .dropdown-toggle {
+    background-color: transparent;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+  }
 
-ul {
+  .dropdown-list {
+    display: none;
+    z-index: 1;
+    list-style-type: none;
+    padding: 0;
+  }
+
+  .dropdown-menu.open .dropdown-list {
+    display: block;
+  }
+
+.navlink {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    padding: 1em;
+    min-width: 110px;
+    display: flex;
     margin: auto;
-}
-
-.active {
-    background-color: #4CAF50;
+    padding-top: 13px;
 }
 
 /* About Me */
 #pro-pic{
-    width: 25%;
-    min-width: 250px;
+    width: clamp(250px, 25%, 350px);
     border-radius: 50%;
     border-style: solid;
     border-width: 5px;
-    border-color: rgb(42, 42, 42);
+    border-color: rgb(255, 255, 255);
     padding: 3px;
     display: flex;
     margin: auto;
@@ -40,6 +83,13 @@ ul {
     margin: auto;
     text-align: left;
     padding: 2em;
+    min-width: 450px;
+    background: rgba(255, 255, 255, 0.35);
+    border-radius: 32px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 3px solid rgba(255, 255, 255, .25);
  }
 
 /* Portfolio */
@@ -79,7 +129,7 @@ a {
 
 /* Contact */
  form {
-    width: 50%;
+    width: clamp(475px, 50%, 750px);
     margin: auto;
     text-align: left;
     padding: 2em;
@@ -87,7 +137,7 @@ a {
 
 input[type="text"], input[type="email"], textarea {
     width: 100%;
-    padding: 12px 20px;
+    padding: 12px 15px;
     margin: 0 0 20px 0;
     display: inline-block;
     border: 1px solid #ccc;
@@ -98,3 +148,68 @@ input[type="text"], input[type="email"], textarea {
 #message {
     height: 400px;
 }
+
+#submit {
+    color: black;
+    margin-top: 40px;
+}
+
+@media (max-width: 768px) {
+    .dropdown-menu {
+      display: block;
+      display: flex;
+      flex-direction: column;
+      height: 65px;
+      max-width: 768px;
+    }
+  
+    .dropdown-toggle {
+      width: 110px;
+      position: fixed;
+      right: 0;
+    }
+  
+    .dropdown-list {
+      position: fixed;
+      top: 60px;
+      right: 0;
+      width: 110px
+    }
+
+    #home {
+        display: none;
+    }
+
+    #homebtn {
+        position: fixed;
+        display: flex;
+        left: 25px;
+        height: 30px;
+    }
+  }
+
+  @media (min-width: 769px) {
+    button {
+        display: none;
+    }
+
+    .dropdown-list {
+        display: flex;
+        margin: auto;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .dropdown-menu {
+        display: flex;
+        width: 100%;
+        height: 65px;
+        justify-content: center;
+    }
+    
+    #homebtn {
+        display: none;
+        margin: auto;
+    }
+  }
+  

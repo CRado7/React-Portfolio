@@ -36,7 +36,7 @@ export default function Contact() {
                       placeholder=""
                   />
               </div>
-              <button type="submit" className="btn btn-primary">
+              <button action="mailto:christopher.ferraro34@gmail.com" type="submit" id="submit" className="btn btn-primary">
                   Submit
               </button>
           </form>
