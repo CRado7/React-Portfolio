@@ -13,10 +13,10 @@ export default function About() {
           <div className="col-lg-8 text-center text-lg-start wow fadeInUp">
             <h2 className="text-8 fw-400 mb-3">Hi, I'm <span className="fw-700 border-bottom border-3 border-primary">CHRISTOPHER</span> !</h2>
             <p className="text-5">I am an aspiring Full Stack Web Developer with a background in Graphic Design.
-              Graphic Design and Web Design were my inspiration to learn how to code websites. As of now, my design skills are most frequently
+              Web Design and Graphic Design ignighted my interest in becoming a Full Stack Developer. As of now, my design skills are most frequently
               used to create logos and branding for start-up businesses and for making custom ski graphics and t-shirt designs.
               In my free time, I chase waves around the east coast year-round and enjoy snowboarding the mountains of Colorado and Vermont in the winter.
-              I am also a part of a rugby club in the area.
+              I am also a part of the Springfield Rifels Rugby Club and work with the board to comeup with poster designs for fundraising opportunities.
               I have a passion for creating and problem solving, and I am excited to bring that passion to the world of web development.</p>
           </div>
           <div className="col-lg-4 mt-4 mt-lg-0 wow fadeInUp" data-wow-delay="0.2s">

@@ -18,12 +18,12 @@ export default function Resume() {
                                 <hr className="my-4"></hr>
                                 <h3 className="text-5">Web Development Certificate</h3>
                                 <p className="mb-2">University of Central Florida {/*/ 2023 - 2024*/}</p>
-                                <p className="text-white-50">This certificate was administered through a six month <a href="https://www.edx.org">edX</a> boot camp through UCF. Topics covered
+                                <p className="text-white-50">This certificate was a six month online boot camp administered through <a href="https://www.edx.org">edX</a>. Topics covered
                                 include but are not limited to the MERN stack, debugging, critical thinking skills, SCRUM workflow</p>
-                                <hr className="my-4"></hr>
+                                {/* <hr className="my-4"></hr>
                                 <h3 className="text-5">Computer Science</h3>
-                                <p className="mb-2">International University {/*/ 2013 - 2014}*/}</p>
-                                <p className="text-white-50">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the dummy text.</p>
+                                <p className="mb-2">International University / 2013 - 2014</p>
+                                <p className="text-white-50">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the dummy text.</p> */}
                             </div>
                         </div>
      

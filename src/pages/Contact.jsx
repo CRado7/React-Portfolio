@@ -18,6 +18,7 @@ export default function Contact() {
                 <li className="social-icons-instagram"><a data-bs-toggle="tooltip" href="http://www.instagram.com/" target="_blank" title="" data-bs-original-title="Instagram"><i className="fab fa-instagram"></i></a></li>
                 <li className="social-icons-dribbble"><a data-bs-toggle="tooltip" href="http://www.dribbble.com/harnishdesign/" target="_blank" title="" data-bs-original-title="Dribbble"><i className="fab fa-dribbble"></i></a></li> */}
                 <li className="social-icons-github"><a data-bs-toggle="tooltip" href="https://github.com/CRado7" target="_blank" title="" data-bs-original-title="GitHub"><i className="fab fa-github"></i></a></li>
+                <li className="social-icons-linkedin"><a data-bs-toggle="tooltip" href="https://www.linkedin.com/in/christopher-ferraro-7a3883170/" target="_blank" title="" data-bs-original-title="linkedin"><i className="fab fa-linkedin"></i></a></li>
               </ul>
             </div>
             <div className="col-lg-6 ms-auto mt-5 mt-lg-0 wow fadeInUp" data-wow-delay="0.3s">
