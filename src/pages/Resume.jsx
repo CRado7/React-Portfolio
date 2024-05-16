@@ -34,19 +34,19 @@ export default function Resume() {
                                 <p className="mb-2">Mittera {/*/ 2022 - 2023*/}</p>
                                 <p className="text-white-50">Mittera is a large commercial printing corperation. Project Managers at Mittera dutifuly keep track of jobs and relay all
                                 updates to the client and sales team. Project Managers work closely with both front and back of house to ensure each job stays on track and on budget. Project Managers
-                                need to have a calm demenor when talking with clients but also have to problem solve and communicate with the production floor and the scheduler to properly
-                                relay information to the client.</p>
+                                need to have a calm demenor when talking with clients but also have to problem solve and communicate with the production team and the scheduler in order to
+                                relay percise information to the client.</p>
                                 <hr className="my-4"></hr>
                                 <h3 className="text-5">Print Production Manager</h3>
                                 <p className="mb-2">Kastlfel {/*/ 2020 - 2022*/}</p>
                                 <p className="text-white-50">Kastlfel is a eco-friendly clothing brand. Their products are sold in most every National Park, Zoo, Museum, ect; in North America. The 
-                                printing process that decorates the shirts is 100% waterbased and the shop practices eco-friendly waste disposal. THe Print Production Managers role includes not only
-                                managing a production schedule that delivers quality goods to the customers on time, but also the necessity to uphold and expand on the eco-friendly practices that the 
+                                printing process that decorates the shirts is 100% waterbased inks and the shop practices eco-friendly waste disposal. The Print Production Managers role includes not only
+                                managing a high volume production schedule that delivers quality goods to the customers on time, but also the necessity to uphold and expand on the eco-friendly practices that the 
                                 Kastlfel brand promotes.</p>
                                 <hr className="my-4"></hr>
                                 <h3 className="text-5">Color Separation Specalist</h3>
                                 <p className="mb-2">Kastlfel {/*/ 2019 - 2020*/}</p>
-                                <p className="text-white-50">The Color Separatino Specalist is a skilled player in highly technical screen print ships. The role of the specalist is to dissect an image
+                                <p className="text-white-50">The Color Separatino Specalist is a skilled player in highly technical screen print shops. The role of the specalist is to dissect an image
                                 with a full range of colors and reduce it down to 10 colors that will blend together on a shirt to give the appearance of a full color image.</p>
                             </div>
                         </div>
