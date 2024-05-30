@@ -1,3 +1,6 @@
+import DevResume from '../assets/ChristopherFerraro_Resume.pdf'
+import SprayArt from '../assets/sprayart2.svg'
+
 export default function Resume() {
         return (
         <section id="resume" className="section">
@@ -52,6 +55,10 @@ export default function Resume() {
                         </div>
                     </div>
                     
+                    <div className="col-lg-6 wow fadeInUp" data-wow-delay="0.2s">
+                        <img src={SprayArt} alt="Spray Can" className="img-fluid spray" />
+                    </div>
+                    
              
                     <h2 className="text-7 fw-600 mb-4 pb-2 mt-5 wow fadeInUp">My Skills</h2>
                     <div className="row gx-5">
@@ -84,7 +91,7 @@ export default function Resume() {
                             </div>
                         </div>
                     </div>
-                    <p className="text-center mt-5 wow fadeInUp"><a href="#" className="btn btn-outline-light shadow-none rounded-0">Download CV</a></p>
+                    <p className="text-center mt-5 wow fadeInUp"><a href={DevResume} download className="btn btn-outline-light shadow-none rounded-0">Download CV</a></p>
                 </div>
             </section>
         );

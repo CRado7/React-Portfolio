@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Lora:400,400i,700");
 body, html {
     height: 100%;
   }
@@ -3678,99 +3679,23 @@ a
   }
 }
 
-/* Ski Pop Up */
-.ski-carousel {
-  background-color: #000000;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  align-content: stretch;
-  width: 100%;
-  height: 100vh;
-  z-index: 3000;
-  top: 0;
-  left: 0;
-  position: fixed;
+/* portfolio card styles */
+.slab {
+  background-color: rgb(251, 245, 240);
 }
-.c-header {
-  display: block;
-  width: 50%;
+
+/* images */
+.spray {
+  float: left;
+  max-width: 550px;
+  margin-top: -500px
 }
-.u-a5 {
-  font-family: Arial;
-  font-size: 37px;
-  line-height: 35px;
-  letter-spacing: 5px;
-  text-transform: uppercase;
-  font-weight: 700;
-  text-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
-  color: #fff;
-}
-.u-b4 {
-  font-family: Arial;
-  font-size: 12px;
-  line-height: 17px;
-  letter-spacing: 0.3px;
-  font-weight: normal;
-  color: #fff;
-}
-a {
-  text-decoration: none;
-}
-.u-media-wrapper {
-  position: relative;
-  width: 100%;
-  background-size: cover;
-  background-position: center;
-  height: 0;
-}
-.u-media-wrapper.u-media-wrapper--16-9 {
-  padding-bottom: 56.25%;
-}
-.c-gradient-overlay {
-  position: absolute;
-  display: block;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-image: radial-gradient(circle at 49% 50%, rgba(2, 21, 25, 0.3), rgba(2, 21, 25, 0.6));
-}
-.c-mouse-vertical-carousel {
-  position: relative;
-  overflow: hidden;
-}
-.c-mouse-vertical-carousel__list {
-  width: 100%;
-  position: absolute;
-  left: 0;
-  top: 0;
-  z-index: 3001;
-  visibility: visible;
-}
-.c-mouse-vertical-carousel__list-item a {
-  display: block;
-  padding-bottom: 25px;
-  padding-top: 25px;
-  padding-left: 54.1666666667%;
-}
-.c-mouse-vertical-carousel__eyebrow {
-  position: relative;
-  padding-bottom: 12px;
-}
-.c-mouse-vertical-carousel__eyebrow span {
-  position: absolute;
-  left: -30px;
-  top: 2px;
-}
-.c-mouse-vertical-carousel__title {
-  max-width: 450px;
-}
-.c-mouse-vertical-carousel__bg-img {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  will-change: transform;
+
+@media screen and (max-width: 991px) {
+  .spray, .spray2 {
+    display: none;
+    float: none;
+    margin: 15px ;
+  }
+  
 }

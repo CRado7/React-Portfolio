@@ -21,7 +21,7 @@ export default function About() {
           </div>
           <div className="col-lg-4 mt-4 mt-lg-0 wow fadeInUp" data-wow-delay="0.2s">
             <div className="featured-box style-4">
-              <img src={SprayArt} alt="Spray Can" className="img-fluid" />
+              <img src={SprayArt} alt="Spray Can" className="img-fluid spray2" />
               {/* <div className="featured-box-icon text-25 fw-500 bg-primary rounded-circle"><span className="wow heartBeat" data-wow-delay="1.3s">22</span></div>
               <h3 className="text-7 wow rubberBand" data-wow-delay="2s">Years of <span className="fw-700">Experiance</span></h3> */}
             </div>

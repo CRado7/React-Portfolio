@@ -1,8 +1,14 @@
 import React from 'react';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Parlor from '../assets/parlor/ParlorThumb.png';
-import Code from '../assets/code-generator.jpeg';
-import GitHub from '../assets/proficiencies/github.svg';
+import Code from '../assets/RandomCodeGenerator.png';
+import SLAB from '../assets/SLAB.svg';
+import DopeSouls from '../assets/dopesouls.png';
+import ECOM from '../assets/ECommerceBackend.png';
+import BootMate from '../assets/bootmate.png';
+import TaskList from '../assets/TaskList.png';
+import README from '../assets/README.png';
+
 
 import SkiCard from '../components/SkiCard';
 
@@ -10,13 +16,40 @@ import SkiCard from '../components/SkiCard';
 export default function Portfolio() {
 
   const [seen, setSeen] = useState(false);
+
   function togglePop() {
     setSeen(!seen);
   }
 
+  useEffect(() => {
+    const handleBodyOverflow = () => {
+      document.body.style.overflow = seen ? 'hidden' : 'auto';
+    };
+
+    handleBodyOverflow();
+
+    const handleOutsideClick = (event) => {
+      if (event.target.id === 'modal') {
+        setSeen(true);
+      }
+    };
+
+    document.addEventListener('click', handleOutsideClick);
+
+    return () => {
+      document.body.style.overflow = 'auto';
+      document.removeEventListener('click', handleOutsideClick);
+    };
+  }, [seen]);
+
+
+
   function SkiDesigns () {
     return (
+      <div id="modal" className="skibig">
         <SkiCard />
+        <button className="close-btn" onClick={togglePop}>Close</button>
+      </div>
     )
   }
 
@@ -49,7 +82,9 @@ export default function Portfolio() {
                       <div className="portfolio-overlay-details">
                         <p className="text-primary text-8"><i className="fas fa-file-alt"></i></p>
                         <h5 className="text-white text-5">Parlor Ski</h5>
-                        <span className="text-light">Custom Ski Graphics</span> </div>
+                        <span className="text-light">Custom Ski Graphics</span> 
+                        
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -57,7 +92,7 @@ export default function Portfolio() {
 
               <div className="col-sm-6 col-lg-4 ucf youtube" data-wow-delay="0.2s">
                 <div className="portfolio-box">
-                  <div className="portfolio-img"><img class="img-fluid d-block" src={Code} alt=""></img>                 
+                  <div className="portfolio-img"><img class="img-fluid d-block" src={README} alt=""></img>                 
                     <div className="portfolio-overlay"> <a className="popup-youtube stretched-link" href="https://www.youtube.com/watch?v=isLLp0w5kI0" target="blank"></a>
                       <div className="portfolio-overlay-details">
                         <p className="text-primary text-8"><i className="fas fa-video"></i></p>
@@ -72,7 +107,7 @@ export default function Portfolio() {
 
               <div className="col-sm-6 col-lg-4 ucf youtube" data-wow-delay="0.2s">
                 <div className="portfolio-box">
-                  <div className="portfolio-img"><img class="img-fluid d-block" src={Code} alt=""></img>                 
+                  <div className="portfolio-img"><img class="img-fluid d-block" src={ECOM} alt=""></img>                 
                     <div className="portfolio-overlay"> <a className="popup-youtube stretched-link" href="https://youtu.be/aoeAmIawO-g" target="blank"></a>
                       <div className="portfolio-overlay-details">
                         <p className="text-primary text-8"><i className="fas fa-video"></i></p>
@@ -102,7 +137,7 @@ export default function Portfolio() {
 
               <div className="col-sm-6 col-lg-4 ucf" data-wow-delay="0.2s">
                 <div className="portfolio-box">
-                  <div className="portfolio-img"> <img className="img-fluid d-block" src={Code} alt=""></img>                  
+                  <div className="portfolio-img"> <img className="img-fluid d-block" src={TaskList} alt=""></img>                  
                     <div className="portfolio-overlay"> <a className="popup-img stretched-link" href="https://floating-reaches-02785-c3d3bbac3309.herokuapp.com" target="blank"></a>
                       <div className="portfolio-overlay-details">
                         <p className="text-primary text-8"><i className="fas fa-file-alt"></i></p>
@@ -117,7 +152,7 @@ export default function Portfolio() {
 
               <div className="col-sm-6 col-lg-4 ucf inProgress" data-wow-delay="0.3s">
                 <div className="portfolio-box">
-                  <div className="portfolio-img"> <img className="img-fluid d-block" src={Code} alt=""></img>
+                  <div className="portfolio-img"> <img className="img-fluid d-block" src={BootMate} alt=""></img>
                     <div className="portfolio-overlay"> 
                       <div className="portfolio-overlay-details">
                         <p className="text-primary text-8"><i className="fas fa-file-alt"></i></p>
@@ -133,7 +168,7 @@ export default function Portfolio() {
 
               <div className="col-sm-6 col-lg-4 caseStudy">
                 <div className="portfolio-box">
-                  <div className="portfolio-img"> <img className="img-fluid d-block" src={Code} alt=""></img>
+                  <div className="portfolio-img"> <img className="img-fluid d-block" src={DopeSouls} alt=""></img>
                     <div className="portfolio-overlay"> <a className="popup-vimeo stretched-link" href="https://vimeo.com/259411563"></a>
                       <div className="portfolio-overlay-details">
                         <p className="text-primary text-8"><i className="fas fa-video"></i></p>
@@ -147,7 +182,7 @@ export default function Portfolio() {
                 </div>
               </div>
 
-              <div className="col-sm-6 col-lg-4 detailed" data-wow-delay="0.2s">
+              {/* <div className="col-sm-6 col-lg-4 detailed" data-wow-delay="0.2s">
                 <div className="portfolio-box">
                   <div className="portfolio-img"> <img className="img-fluid d-block" src="images/projects/project-5.jpg" alt=""></img>
                     <div className="portfolio-overlay"> <a className="popup-ajax stretched-link" href="ajax/portfolio-ajax-project-2.html"></a>
@@ -161,11 +196,11 @@ export default function Portfolio() {
                     </div>
                   </div>
                 </div>
-              </div>
+              </div> */}
 
               <div className="col-sm-6 col-lg-4 caseStudy" data-wow-delay="0.2s">
                 <div className="portfolio-box">
-                  <div className="portfolio-img"> <img className="img-fluid d-block" src={Code} alt=""></img>
+                  <div className="portfolio-img slab"> <img className="img-fluid d-block" src={SLAB} alt=""></img>
                     <div className="portfolio-overlay"> <a className="popup-img stretched-link" href="images/projects/project-6.jpg"></a>
                       <div className="portfolio-overlay-details">
                         <p className="text-primary text-8"><i className="fas fa-image"></i></p>
