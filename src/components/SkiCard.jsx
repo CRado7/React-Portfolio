@@ -49,28 +49,28 @@ function SkiDesigns(){
                 <SwiperSlide className="slide">
                     <img className="ski" src={CherryBlossom} alt="slide_image" />
                 </SwiperSlide>
-                <SwiperSlide>
+                <SwiperSlide className="slide">
                     <img className="ski" src={RavenRising} alt="slide_image" />
                 </SwiperSlide>
-                <SwiperSlide>
+                <SwiperSlide className="slide">
                     <img className="ski" src={Samuri} alt="slide_image" />
                 </SwiperSlide>
-                <SwiperSlide>
+                <SwiperSlide className="slide">
                     <img className="ski" src={SpaceBees} alt="slide_image" />
-                </SwiperSlide>
-                <SwiperSlide>
+                </SwiperSlide >
+                <SwiperSlide className="slide">
                     <img className="ski" src={SpaceCowboy} alt="slide_image" />
                 </SwiperSlide>
-                <SwiperSlide>
+                <SwiperSlide className="slide">
                     <img className="ski" src={StrangeHoliday} alt="slide_image" />
                 </SwiperSlide>
-                <SwiperSlide>
+                <SwiperSlide className="slide">
                     <img className="ski" src={Sunrise} alt="slide_image" />
                 </SwiperSlide>
-                <SwiperSlide>
+                <SwiperSlide className="slide">
                     <img className="ski" src={Valhalla} alt="slide_image" />
                 </SwiperSlide>
-                <SwiperSlide>
+                <SwiperSlide className="slide">
                     <img className="ski" src={WesternSkies} alt="slide_image" />
                 </SwiperSlide>
 
