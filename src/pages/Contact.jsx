@@ -27,15 +27,15 @@ export default function Contact() {
               <form id="contact-form" className="form-border" action="php/mail.php" method="post">
                 <div className="row g-4">
                   <div className="col-12">
-                    <label className="form-label" for="name">What is Your Name:</label>
+                    <label className="form-label" htmlFor="name">What is Your Name:</label>
                     <input id="name" name="name" type="text" className="form-control py-1" required ></input>
                   </div>
                   <div className="col-12">
-                    <label className="form-label" for="email">Your Email Address:</label>
+                    <label className="form-label" htmlFor="email">Your Email Address:</label>
                     <input id="email" name="email" type="email" className="form-control py-1" required ></input>
                   </div>
                   <div className="col-12">
-                    <label className="form-label" for="form-message">How can I Help you?:</label>
+                    <label className="form-label" htmlFor="form-message">How can I Help you?:</label>
                     <textarea id="form-message" name="form-message" className="form-control py-4" rows="4" required ></textarea>
                   </div>
                   <div className="col-12 text-center text-lg-start">

@@ -9,6 +9,7 @@ import './index.css';
 import App from './App';
 import ErrorPage from './pages/ErrorPage';
 import Home from './pages/Home';
+import SkiDesigns from './pages/SkiCard';
 
 
 // Define the accessible routes, and which components respond to which URL
@@ -21,6 +22,10 @@ const router = createBrowserRouter([
       {
         index: true,
         element: <Home />,
+      },
+      {
+        path: 'custom-ski-designs',
+        element: <SkiDesigns />,
       }
     ],
   },

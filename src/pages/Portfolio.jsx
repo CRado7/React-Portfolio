@@ -1,5 +1,7 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+
 import Parlor from '../assets/parlor/ParlorThumb.png';
 import Code from '../assets/RandomCodeGenerator.png';
 import SLAB from '../assets/SLAB.svg';
@@ -10,48 +12,48 @@ import TaskList from '../assets/TaskList.png';
 import README from '../assets/README.png';
 
 
-import SkiCard from '../components/SkiCard';
+// import SkiCard from '../components/SkiCard';
 
 
 export default function Portfolio() {
 
-  const [seen, setSeen] = useState(false);
+  // const [seen, setSeen] = useState(false);
 
-  function togglePop() {
-    setSeen(!seen);
-  }
+  // function togglePop() {
+  //   setSeen(!seen);
+  // }
 
-  useEffect(() => {
-    const handleBodyOverflow = () => {
-      document.body.style.overflow = seen ? 'hidden' : 'auto';
-    };
+  // useEffect(() => {
+  //   const handleBodyOverflow = () => {
+  //     document.body.style.overflow = seen ? 'hidden' : 'auto';
+  //   };
 
-    handleBodyOverflow();
+  //   handleBodyOverflow();
 
-    const handleOutsideClick = (event) => {
-      if (event.target.id === 'modal') {
-        setSeen(true);
-      }
-    };
+  //   const handleOutsideClick = (event) => {
+  //     if (event.target.className !=='close-btn') {
+  //       setSeen(true);
+  //     }
+  //   };
 
-    document.addEventListener('click', handleOutsideClick);
+  //   document.addEventListener('click', handleOutsideClick);
 
-    return () => {
-      document.body.style.overflow = 'auto';
-      document.removeEventListener('click', handleOutsideClick);
-    };
-  }, [seen]);
+  //   return () => {
+  //     document.body.style.overflow = 'auto';
+  //     document.removeEventListener('click', handleOutsideClick);
+  //   };
+  // }, [seen]);
 
 
 
-  function SkiDesigns () {
-    return (
-      <div id="modal" className="skibig">
-        <SkiCard />
-        <button className="close-btn" onClick={togglePop}>Close</button>
-      </div>
-    )
-  }
+  // function SkiDesigns () {
+  //   return (
+  //     <div id="modal" className="skibig">
+  //       <SkiCard />
+  //       <img className="close-btn" src={Close} onClick={togglePop}></img>
+  //     </div>
+  //   )
+  // }
 
     return (
         <section id="portfolio" className="section bg-light">
@@ -74,8 +76,8 @@ export default function Portfolio() {
           <div className="portfolio wow fadeInUp">
             <div className="row g-4 mt-3 portfolio-filter">
 
-              <div className="col-sm-6 col-lg-4 parlor" onClick={togglePop}>
-              {seen ? <SkiDesigns toggle={togglePop} /> : null}
+            <Link to="/custom-ski-designs"><div className="col-sm-6 col-lg-4 parlor" >
+              
                 <div className="portfolio-box">
                   <div className="portfolio-img"> <img className="img-fluid d-block" src={Parlor} alt="Parlor Skis"></img>
                     <div className="portfolio-overlay">
@@ -89,10 +91,11 @@ export default function Portfolio() {
                   </div>
                 </div>
               </div>
+              </Link>
 
               <div className="col-sm-6 col-lg-4 ucf youtube" data-wow-delay="0.2s">
                 <div className="portfolio-box">
-                  <div className="portfolio-img"><img class="img-fluid d-block" src={README} alt=""></img>                 
+                  <div className="portfolio-img"><img className="img-fluid d-block" src={README} alt=""></img>                 
                     <div className="portfolio-overlay"> <a className="popup-youtube stretched-link" href="https://www.youtube.com/watch?v=isLLp0w5kI0" target="blank"></a>
                       <div className="portfolio-overlay-details">
                         <p className="text-primary text-8"><i className="fas fa-video"></i></p>
@@ -107,7 +110,7 @@ export default function Portfolio() {
 
               <div className="col-sm-6 col-lg-4 ucf youtube" data-wow-delay="0.2s">
                 <div className="portfolio-box">
-                  <div className="portfolio-img"><img class="img-fluid d-block" src={ECOM} alt=""></img>                 
+                  <div className="portfolio-img"><img className="img-fluid d-block" src={ECOM} alt=""></img>                 
                     <div className="portfolio-overlay"> <a className="popup-youtube stretched-link" href="https://youtu.be/aoeAmIawO-g" target="blank"></a>
                       <div className="portfolio-overlay-details">
                         <p className="text-primary text-8"><i className="fas fa-video"></i></p>
