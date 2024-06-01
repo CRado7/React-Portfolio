@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import SkiNav from '../components/SkiNav';
 import CherryBlossom from '../assets/parlor/CherryBlossom.png';
 import RavenRising from '../assets//parlor/RavenRising.png';
 import Samuri from '../assets/parlor/Samuri.png';
@@ -8,6 +9,9 @@ import StrangeHoliday from '../assets/parlor/StrangeHoliday.png';
 import Sunrise from '../assets/parlor/Sunrise.png';
 import Valhalla from '../assets/parlor/Valhalla.png';
 import WesternSkies from '../assets/parlor/WesternSkies.png';
+import mountainBackground from '../assets/background.jpg';
+import left from '../assets/left.svg';
+import right from '../assets/right.svg';
 import '../styles/skiCard.css';
 
 const designs = [
@@ -67,34 +71,61 @@ const designs = [
     },
 ];
 
-
 export default function SkiDesigns() {
-    const [selectedImage, setSelectedImage] = useState(CherryBlossom);
+    const [selectedIndex, setSelectedIndex] = useState(0);
 
-    const handleItemClick = (id) => {
-        const selectedDesign = designs.find((design) => design.id === id);
-        console.log("Selected design:", selectedDesign);
-        setSelectedImage(selectedDesign.image);
+    const handleNext = () => {
+        setSelectedIndex((prevIndex) => (prevIndex + 1) % designs.length);
     };
 
-    let designList = null;
-    if (designs.length) {
-        designList = designs.map((design) => (
-            <li key={design.id} className="design-names">
-                <button onClick={() => handleItemClick(design.id)}>
-                    {design.name}
-                </button>
-            </li>
-        ));
-    }
+    const handlePrev = () => {
+        setSelectedIndex((prevIndex) => (prevIndex - 1 + designs.length) % designs.length);
+    };
+
+    const handleItemClick = (index) => {
+        setSelectedIndex(index);
+    };
 
     return (
-        <div className="carousel">
-            <div className="carousel-list">
-                <ul className="design-list">{designList}</ul>
-            </div>
+        <div className="carousel hero-bg parallax" style={{ backgroundImage: `url(${mountainBackground})` }}>
+            <SkiNav />
+            {/* <div className="carousel-list">
+                <ul className="design-list">
+                    {designs.map((design, index) => (
+                        <li key={design.id} className={`design-names ${selectedIndex === index ? 'active' : ''}`}>
+                            <button className="ski-btn" onClick={() => handleItemClick(index)}>
+                                {design.name}
+                            </button>
+                        </li>
+                    ))}
+                </ul>
+            </div> */}
             <div className="carousel-designs">
-                {selectedImage && <img className="design" src={selectedImage} alt="Selected Design" />}
+                    <div className="design-description">
+                        <h2>{designs[selectedIndex].name}</h2>
+                        <p>{designs[selectedIndex].description}</p>
+                    </div>
+                    <div className="arrow-buttons">
+                        <button className="prev" onClick={handlePrev}>
+                            <img className="prev" src={left} alt="Previous Design" />
+                        </button>
+                        <button className="next" onClick={handleNext}>
+                            <img className="next" src={right} alt="Next Design" />
+                        </button>
+                    </div>
+                    <div className="design-image">
+                        <img className="design" src={designs[selectedIndex].image} alt="Selected Design" />
+                    </div>
+
+                <div className="navigation-bubbles">
+                    {designs.map((_, index) => (
+                        <span
+                            key={index}
+                            className={`navigation-bubble ${selectedIndex === index ? 'active' : ''}`}
+                            onClick={() => handleItemClick(index)}
+                        />
+                    ))}
+                </div>
             </div>
         </div>
     );

@@ -10,45 +10,157 @@
 
 .carousel {
   width: 100%;
-  height: 100%;
+  height: 100vh;
   margin: 0;
   display: flex;
-  flex-direction: row-reverse;
+  flex-direction: column;
 }
-.carousel-list, .carousel-designs {
-  width: 50%;
+
+.design-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  height: 20%;
+  position: absolute;
+  color: black;
+  background-color: bisque;
+}
+
+.design-names {
+  font-size: 1rem;
+  margin: 0 15px 15px 0;
+  color: #000000;
+  text-align: left;
+  list-style-type: none;
+  width: 20%;
+}
+
+/* ski design carousel */
+.carousel-list {
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   margin: auto;
 }
 
-
-.design-list {
+.carousel-designs {
   display: flex;
-  flex-direction: column;
+  flex-direction:row-reverse;
+  flex-wrap: wrap-reverse;
   justify-content: center;
-  width: 50%;
-  height: 100%;
-  position: absolute;
-  color: black;
+  height: calc(95% - 71px);
+  overflow: scroll;
+  background-color: rgba(0, 0, 0, 0.85);
 }
 
-.design-names {
-  font-size: 2rem;
-  margin: 0 15px 15px 0;
-  color: #000000;
-  text-align: left;
-  list-style-type: none;
+.design-image {
+  display: flex;
+  justify-content: center;
+  width: 300px;
+  height: 100%;
+  object-fit: cover;
 }
 
 .design {
-  display: block;
-  z-index: 5000;
+  height: 100%;
 }
 
-.art {
-  width: 300px;
-  background-color: rgb(74, 74, 74);
+.design-description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: clamp(320px, 400px, 400px);
+  color: white;
+}
+
+.prev {
+  position: absolute;
+  top: 50%;
+  height: 50px;
+  left: 10px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: rgb(0, 0, 0);
+  font-size: 2rem;
+}
+
+.next {
+  position: absolute;
+  top: 50%;
+  height: 50px;
+  right: 10px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: rgb(0, 0, 0);
+  font-size: 2rem;
+}
+
+button {
+  background: none;
   border: none;
+  outline: none;
+  box-shadow: none;
+}
+
+
+
+@media (max-width: 699px) {
+  .design {
+    height: 100%;
+  }
+
+  .design-image {
+    height: 80%;
+    align-items: center;
+  }
+
+  .next, .prev {
+    top: 40%;
+  }
+}
+
+@media (max-width: 991px) {
+
+  .carousel-designs {
+    height: calc(95% - 67px);
+
+  }
+}
+
+
+/* navigation blubles */
+.navigation-bubbles {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  position: fixed;
+  bottom: 0px;
+  height: 5%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.85);
+}
+
+.navigation-bubble {
+  width: 10px;
+  height: 10px;
+  background-color: #ccc;
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.navigation-bubble.active {
+  background-color: #f5df4e;
+  transform: translateY(-5px);
+  width: 15px;
+  height: 15px;
+  transition: all 0.3s;
+}
+
+.navigation-bubble:focus {
+  outline: none;
+  box-shadow: 0 0 3px 2px rgba(0, 0, 0, 0.5);
 }

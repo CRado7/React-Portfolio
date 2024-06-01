@@ -73,10 +73,10 @@ export default function Portfolio() {
             <li className="nav-item"> <a data-filter=".youtube" href="" className="nav-link rounded-0">Walk Through Videos</a></li>
           </ul>
 
-          <div className="portfolio wow fadeInUp">
+          <div className="portfolio wow fadeInUp parlor">
             <div className="row g-4 mt-3 portfolio-filter">
 
-            <Link to="/custom-ski-designs"><div className="col-sm-6 col-lg-4 parlor" >
+            <Link className="col-sm-6 col-lg-4 parlor" to="/custom-ski-designs"><div>
               
                 <div className="portfolio-box">
                   <div className="portfolio-img"> <img className="img-fluid d-block" src={Parlor} alt="Parlor Skis"></img>
