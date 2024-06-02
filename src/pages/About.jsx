@@ -42,7 +42,7 @@ export default function About() {
           </div>
           <div className="col-6 col-lg-3 wow fadeInUp" data-wow-delay="0.4s">
             <p className="text fw-500 mb-0">From:</p>
-            <p className="text-4 text-white-50 fw-600 mb-0">Springfield, MA</p>
+            <p className="text-4 text-white-50 fw-600 mb-0">Cape Cod, MA</p>
           </div>
         </div>
       </div>

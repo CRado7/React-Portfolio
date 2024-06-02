@@ -71,7 +71,7 @@ export default function Resume() {
                             <div className="progress progress-sm mb-4">
                                 <div className="progress-bar" role="progressbar" style={{width: '95%'}} aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
                             </div>
-                            <p className="fw-500 text-start mb-2">JavaScript <span className="float-end">75%</span></p>
+                            <p className="fw-500 text-start mb-2">JavaScript/React <span className="float-end">75%</span></p>
                             <div className="progress progress-sm mb-4">
                                 <div className="progress-bar" role="progressbar" style={{width: '75%'}} aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
                             </div>
@@ -85,9 +85,9 @@ export default function Resume() {
                             <div className="progress progress-sm mb-4">
                                 <div className="progress-bar" role="progressbar" style={{width: '95%'}} aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
                             </div>
-                            <p className="fw-500 text-start mb-2">Figuring Sh*t out <span className="float-end">99%</span></p>
+                            <p className="fw-500 text-start mb-2">Problem Solving <span className="float-end">90%</span></p>
                             <div className="progress progress-sm mb-4">
-                                <div className="progress-bar" role="progressbar" style={{width: '99%'}} aria-valuenow="99" aria-valuemin="0" aria-valuemax="100"></div>
+                                <div className="progress-bar" role="progressbar" style={{width: '90%'}} aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
                             </div>
                         </div>
                     </div>

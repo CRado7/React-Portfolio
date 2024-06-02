@@ -89,17 +89,6 @@ export default function SkiDesigns() {
     return (
         <div className="carousel hero-bg parallax" style={{ backgroundImage: `url(${mountainBackground})` }}>
             <SkiNav />
-            {/* <div className="carousel-list">
-                <ul className="design-list">
-                    {designs.map((design, index) => (
-                        <li key={design.id} className={`design-names ${selectedIndex === index ? 'active' : ''}`}>
-                            <button className="ski-btn" onClick={() => handleItemClick(index)}>
-                                {design.name}
-                            </button>
-                        </li>
-                    ))}
-                </ul>
-            </div> */}
             <div className="carousel-designs">
                     <div className="design-description">
                         <h2>{designs[selectedIndex].name}</h2>
