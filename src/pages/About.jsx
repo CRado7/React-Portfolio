@@ -4,10 +4,9 @@ export default function About() {
     return (
         <section id="about" className="section">
       <div className="container"> 
-        {/* Heading */}
+      
         <p className="text-center mb-2 wow fadeInUp"><span className="bg-primary text-dark px-2">About Me</span></p>
         <h2 className="text-10 fw-600 text-center mb-5 wow fadeInUp">Get to Know Me</h2>
-        {/* Heading end */}
         
         <div className="row">
           <div className="col-lg-8 text-center text-lg-start wow fadeInUp">
@@ -22,8 +21,6 @@ export default function About() {
           <div className="col-lg-4 mt-4 mt-lg-0 wow fadeInUp" data-wow-delay="0.2s">
             <div className="featured-box style-4">
               <img src={SprayArt} alt="Spray Can" className="img-fluid spray2" />
-              {/* <div className="featured-box-icon text-25 fw-500 bg-primary rounded-circle"><span className="wow heartBeat" data-wow-delay="1.3s">22</span></div>
-              <h3 className="text-7 wow rubberBand" data-wow-delay="2s">Years of <span className="fw-700">Experiance</span></h3> */}
             </div>
           </div>
         </div>

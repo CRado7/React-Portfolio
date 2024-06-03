@@ -12,48 +12,7 @@ import TaskList from '../assets/TaskList.png';
 import README from '../assets/README.png';
 
 
-// import SkiCard from '../components/SkiCard';
-
-
 export default function Portfolio() {
-
-  // const [seen, setSeen] = useState(false);
-
-  // function togglePop() {
-  //   setSeen(!seen);
-  // }
-
-  // useEffect(() => {
-  //   const handleBodyOverflow = () => {
-  //     document.body.style.overflow = seen ? 'hidden' : 'auto';
-  //   };
-
-  //   handleBodyOverflow();
-
-  //   const handleOutsideClick = (event) => {
-  //     if (event.target.className !=='close-btn') {
-  //       setSeen(true);
-  //     }
-  //   };
-
-  //   document.addEventListener('click', handleOutsideClick);
-
-  //   return () => {
-  //     document.body.style.overflow = 'auto';
-  //     document.removeEventListener('click', handleOutsideClick);
-  //   };
-  // }, [seen]);
-
-
-
-  // function SkiDesigns () {
-  //   return (
-  //     <div id="modal" className="skibig">
-  //       <SkiCard />
-  //       <img className="close-btn" src={Close} onClick={togglePop}></img>
-  //     </div>
-  //   )
-  // }
 
     return (
         <section id="portfolio" className="section bg-light">
@@ -100,7 +59,6 @@ export default function Portfolio() {
                       <div className="portfolio-overlay-details">
                         <p className="text-primary text-8"><i className="fas fa-video"></i></p>
                         <h5 className="text-white text-5">Command Line README Generator</h5>
-                        {/* <a href="https://github.com/CRado7/Random-Password-Generator"><img className="github-link" src={GitHub}></img></a> */}
                         <span className="text-light">Node.js Project</span>
                       </div>
                     </div>
@@ -115,7 +73,6 @@ export default function Portfolio() {
                       <div className="portfolio-overlay-details">
                         <p className="text-primary text-8"><i className="fas fa-video"></i></p>
                         <h5 className="text-white text-5">ORM E-Commerce Backend</h5>
-                        {/* <a href="https://github.com/CRado7/Random-Password-Generator"><img className="github-link" src={GitHub}></img></a> */}
                         <span className="text-light">Insomnia Backend Project</span>
                       </div>
                     </div>
@@ -130,7 +87,6 @@ export default function Portfolio() {
                       <div className="portfolio-overlay-details">
                         <p className="text-primary text-8"><i className="fas fa-file-alt"></i></p>
                         <h5 className="text-white text-5">Random Code Generator</h5>
-                        {/* <a href="https://github.com/CRado7/Random-Password-Generator"><img className="github-link" src={GitHub}></img></a> */}
                         <span className="text-light">JavaScript Project</span>
                       </div>
                     </div>
@@ -145,7 +101,6 @@ export default function Portfolio() {
                       <div className="portfolio-overlay-details">
                         <p className="text-primary text-8"><i className="fas fa-file-alt"></i></p>
                         <h5 className="text-white text-5">Task List</h5>
-                        {/* <a href="https://github.com/CRado7/Random-Password-Generator"><img className="github-link" src={GitHub}></img></a> */}
                         <span className="text-light">Express.js Project</span>
                       </div>
                     </div>
@@ -184,22 +139,6 @@ export default function Portfolio() {
                   </div>
                 </div>
               </div>
-
-              {/* <div className="col-sm-6 col-lg-4 detailed" data-wow-delay="0.2s">
-                <div className="portfolio-box">
-                  <div className="portfolio-img"> <img className="img-fluid d-block" src="images/projects/project-5.jpg" alt=""></img>
-                    <div className="portfolio-overlay"> <a className="popup-ajax stretched-link" href="ajax/portfolio-ajax-project-2.html"></a>
-                      <div className="portfolio-overlay-details">
-                        <p className="text-primary text-8"><i className="fas fa-file-alt"></i></p>
-                        <h5 className="text-white text-5">BaseDown</h5>
-                        <span className="text-light">Screen Print Shop Scheduler</span> 
-                        <br></br>
-                        <span className="text-light"><i>Coming Soon</i></span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div> */}
 
               <div className="col-sm-6 col-lg-4 caseStudy" data-wow-delay="0.2s">
                 <div className="portfolio-box">
