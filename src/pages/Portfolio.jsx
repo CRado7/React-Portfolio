@@ -127,11 +127,11 @@ export default function Portfolio() {
               <div className="col-sm-6 col-lg-4 caseStudy">
                 <div className="portfolio-box">
                   <div className="portfolio-img"> <img className="img-fluid d-block" src={DopeSouls} alt=""></img>
-                    <div className="portfolio-overlay"> <a className="popup-vimeo stretched-link" href="https://vimeo.com/259411563"></a>
+                    <div className="portfolio-overlay"> <a className="popup-vimeo stretched-link" href="https://crado7.github.io/Dope-Souls/" target="blank"></a>
                       <div className="portfolio-overlay-details">
                         <p className="text-primary text-8"><i className="fas fa-video"></i></p>
                         <h5 className="text-white text-5">Dope Souls</h5>
-                        <span className="text-light">E-Commerce Site</span> 
+                        <span className="text-light">E-Commerce Landing Page</span> 
                         <br></br>
                         <span className="text-light"><i>Case Study</i></span>
                       </div>
