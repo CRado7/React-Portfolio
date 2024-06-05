@@ -8,4 +8,12 @@ export default defineConfig({
     port: 3000,
     open: true,
   },
+  build: {
+    outDir: 'dist', // Specify your output directory
+    rollupOptions: {
+      input: {
+        main: '../client/src/main.jsx' // Adjust the path to your main entry file
+      }
+    }
+  }
 });
