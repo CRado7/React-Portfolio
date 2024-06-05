@@ -12,7 +12,7 @@ export default defineConfig({
     outDir: 'dist', // Specify your output directory
     rollupOptions: {
       input: {
-        main: '../client/src/main.jsx' // Adjust the path to your main entry file
+        main: './src/main.jsx' // Adjust the path to your main entry file
       }
     }
   }
